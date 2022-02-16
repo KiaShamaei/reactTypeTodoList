@@ -55,6 +55,8 @@ export const Todos = () => {
       isCompleted: false,
     };
     priority && task && handleAddTodo(todo);
+	setPriority("");
+	setTask("");
   };
 
   const handleDelete = (id: string) => {
@@ -79,6 +81,7 @@ export const Todos = () => {
     <section className="w-10/12 sm:w-10/12 lg:w-1/2 max-w-2xl border rounded shadow-lg px-4 py-10 bg-white flex flex-col items-center">
       <AddTodo
         task={task}
+		priority={priority}
         handleChangeText={handleChangeText}
         handleChangePriority={handleChangePriority}
         handleSubmit={handleSubmit}

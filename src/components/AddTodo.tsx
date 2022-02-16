@@ -2,12 +2,13 @@ import React, { ChangeEvent, FormEvent } from "react";
 
 type AddTodoProps = {
   task: string;
+  priority :string;
   handleChangeText: (e: ChangeEvent) => void;
   handleChangePriority: (e: ChangeEvent) => void;
   handleSubmit: (e: FormEvent) => void;
 };
 
-export const AddTodo = ({ task, handleChangeText , handleChangePriority , handleSubmit }: AddTodoProps) => {
+export const AddTodo = ({ task , priority, handleChangeText , handleChangePriority , handleSubmit }: AddTodoProps) => {
   return (
     <form
       className="w-12/12 flex flex-col justify-center items-center mb-4"
@@ -31,7 +32,7 @@ export const AddTodo = ({ task, handleChangeText , handleChangePriority , handle
         type="text"
         name="priority"
         placeholder="priority 1-5..."
-        value={task}
+        value={priority}
         onChange={handleChangePriority}
       />
       </div>
