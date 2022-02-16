@@ -1,4 +1,4 @@
-# React TypeScript Todo App
+# React TypeScript Todo App with kia shamaei
 
 This project is created using Create React App and TailwindCSS, coded with TypeScript.
 
